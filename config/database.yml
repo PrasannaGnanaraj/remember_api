@@ -24,4 +24,4 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  url: <%= ENV['RDS_DATABASE_URL'] || ENV['DATABASE_URL'] %>
